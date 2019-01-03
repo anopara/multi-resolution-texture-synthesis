@@ -20,5 +20,5 @@ To start, open the Jupyter Notebook file "Multi-resolution Texture Synthesis", a
 ### Interested in contributing?
 
 Here are some potentially interesting alterations/experiments one could do :3
-* with laplacian pyramid, there is an element of 'memorylessness' as the parent map doesn't have full information from its own parents. What if we query not just our parent, but a sum of _all_ previous parents?
+* with laplacian pyramid, there is an element of 'memorylessness' as the parent map doesn't have contain explicit information of its own parent. What if we query not just our parent, but a sum of _all_ previous parents?
 * can be potentially used for "super-resolution", where you enlarge an image based on some other example's micro-structures
