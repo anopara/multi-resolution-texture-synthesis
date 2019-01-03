@@ -17,6 +17,8 @@ Here are the libraries and their versions you will need:
 
 To start, open the Jupyter Notebook file "Multi-resolution Texture Synthesis", and follow the instructions :) 
 
+NOTE: you might want to disable "Show Live Update" functino in the .py file, if you want faster generation. Found out that matplotlib image display is very-very slow D: 
+
 ### Interested in contributing?
 
 Here are some potentially interesting alterations/experiments one could do :3
