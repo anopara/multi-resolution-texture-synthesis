@@ -1,5 +1,5 @@
 # multi-resolution-texture-synthesis
-Based on “Fast Texture Synthesis using Tree-structured Vector Quantization” and “Multiresolution Sampling Procedure for Analysis and Synthesis of Texture Images” papers
+Based on “[Fast Texture Synthesis using Tree-structured Vector Quantization](https://graphics.stanford.edu/papers/texture-synthesis-sig00/texture.pdf)” and “[Multiresolution Sampling Procedure for Analysis and Synthesis of Texture Images](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.40.390&rep=rep1&type=pdf)” papers
 
 ![](TextureSynthesis_6.gif)
 
