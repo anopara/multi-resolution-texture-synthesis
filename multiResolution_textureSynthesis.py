@@ -81,7 +81,7 @@ def multiResolution_textureSynthesis(parms, userExample = None):
 def visualizeNextLevel(prevLevel, nextLevel, filledMapNextLevel):
     rows, cols, _ = np.shape(nextLevel)
     img = Image.fromarray(np.uint8(prevLevel*255))
-    img = img.resize((rows, cols), resample=0, box=None)
+    img = img.resize((cols, rows), resample=0, box=None)
     img = np.asarray(img)/255.0
     return img * (1-filledMapNextLevel) + nextLevel * filledMapNextLevel
 
@@ -93,7 +93,7 @@ def saveParms(parms):
 
 def resize(in_img, size):
     img = Image.fromarray(np.uint8(in_img*255))
-    img = img.resize((size[0], size[1]), resample=0, box=None)
+    img = img.resize((size[1], size[0]), resample=0, box=None)
     return np.asarray(img)/255.0
 
 def randomRow2Map(copyFrom, copyTo, filledMap, rowsToCopy):
@@ -108,7 +108,7 @@ def randomRow2Map(copyFrom, copyTo, filledMap, rowsToCopy):
 def copyMap2Map(copyFrom, copyTo, filledMap):
     rows, cols, _ = np.shape(copyTo)
     img = Image.fromarray(np.uint8(copyFrom*255))
-    img = img.resize((rows, cols), resample=0, box=None)
+    img = img.resize((cols, rows), resample=0, box=None)
     copyTo = np.asarray(img)/255.0
     filledMap = np.ones(np.shape(filledMap))
     return copyTo, filledMap
@@ -202,7 +202,7 @@ def findBestMatchCoord(canvas, exampleMap, kD, pyramidLevel, coord, parms, sampl
     return chosenCoord
 
 def id2coord(coordFlat, imgSize):
-    row = floor(coordFlat / imgSize[0])
+    row = floor(coordFlat / imgSize[1])
     col = coordFlat - row * imgSize[1]
     
     return [row, col]
